@@ -1,6 +1,9 @@
+<!-- {{ this.products$ | async | json }} -->
+
 <app-product-filter></app-product-filter>
 
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
+<div class="card-container">
+  @for (product of (products$ | async); track product.id) {
+  <app-product-card [product]="product"></app-product-card>
+  }
+</div>
