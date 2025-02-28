@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { ProductsContainerComponent } from './products-container/products-container.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, ProductsContainerComponent],
+  imports: [HeaderComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

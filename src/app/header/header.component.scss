@@ -1,26 +1,7 @@
-header {
-  height: 2rem;
-  background-color: darkgray;
-  padding: 1rem;
-  border-bottom: 1px solid black;
+.example-spacer {
+  flex: 1 1 auto;
+}
 
-  nav {
-    height: 100%;
-
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    ul {
-      list-style: none;
-
-      li {
-        &:hover {
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
-    }
-  }
+.selected {
+  background-color: red;
 }

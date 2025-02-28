@@ -1,8 +1,21 @@
-<header>
-  <nav>
-    <span>products list</span>
-    <ul>
-      <li>dummy</li>
-    </ul>
-  </nav>
-</header>
+<mat-toolbar>
+  <a routerLink="products" routerLinkActive="selected">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon i18n>home</mat-icon>
+    </button>
+    <span>Products</span>
+  </a>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon"
+    routerLink="impressum"
+    routerLinkActive="selected"
+  >
+    <mat-icon>approval</mat-icon>
+  </button>
+</mat-toolbar>
