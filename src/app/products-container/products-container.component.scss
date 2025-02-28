@@ -1,0 +1,12 @@
+.card-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  row-gap: 1rem;
+  justify-content: center;
+
+  app-product-card {
+    width: calc(20% - 1rem);
+  }
+}
