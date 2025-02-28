@@ -15,8 +15,13 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductsContainerComponent {
   products$: Observable<Product[]>;
+  selectedCategory: string = '';
 
   constructor(private readonly productService: ProductService) {
     this.products$ = this.productService.receiveProducts();
+  }
+
+  onSelectedCategory(selectedCategory: string) {
+    this.selectedCategory = selectedCategory;
   }
 }

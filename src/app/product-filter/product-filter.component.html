@@ -1,1 +1,21 @@
-<p>product-filter works!</p>
+@if (!(categories$ | async)) {
+<mat-spinner></mat-spinner>
+} @else {
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Categories filter</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      @for (option of categories$ | async; track option) {
+      <mat-option [value]="option">{{ option }}</mat-option>
+      }
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+}

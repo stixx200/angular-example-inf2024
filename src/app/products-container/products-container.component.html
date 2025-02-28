@@ -1,9 +1,11 @@
-<!-- {{ this.products$ | async | json }} -->
-
-<app-product-filter></app-product-filter>
+<app-product-filter
+  [products]="products$"
+  (selectedCategory)="onSelectedCategory($event)"
+></app-product-filter>
 
 <div class="card-container">
-  @for (product of (products$ | async); track product.id) {
+  @for (product of (products$ | async); track product.id) { @if
+  (product.category === selectedCategory) {
   <app-product-card [product]="product"></app-product-card>
-  }
+  } }
 </div>
